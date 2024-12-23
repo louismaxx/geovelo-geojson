@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 
-def main(intput_file, output_file):
+def main(input_file, output_file):
 
     try:
         # Load JSON file
@@ -43,8 +43,8 @@ def main(intput_file, output_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Filter and append data to a JSON template.")
-    parser.add_argument("-i","--input", required=True, help="Path to the input JSON file.")
-    parser.add_argument("-o","--output", required=True, help="Path to the output JSON file.")
+    parser.add_argument("-i", "--input", required=True, help="Path to the input JSON file.")
+    parser.add_argument("-o", "--output", required=True, help="Path to the output JSON file.")
 
     # Parse arguments
     args = parser.parse_args()
