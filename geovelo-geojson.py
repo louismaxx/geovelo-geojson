@@ -22,14 +22,16 @@ def main(input_file, output_file):
         "features": []
     }
 
-    value_filter = ['id', 'geometry']
+    value_filter = ['id', 'geometry', 'start_datetime', 'end_datetime']
 
     for item in data:
         feature = {
             "type": "Feature",
             "geometry": item['geometry'],
             "properties": {
-                "id": item['id']
+                "id": item['id'],
+                "start_datetime": item['start_datetime'],
+                "end_datetime": item['end_datetime']
             }
         }
         template['features'].append(feature)
